@@ -1,3 +1,9 @@
+#ifndef TREENODE_H
+#define TREENODE_H
+
+#include <iostream>
+using namespace std;
+
 class TreeNode {   
                                         
    TreeNode *leftPtr; // pointer to left subtree 
@@ -13,12 +19,11 @@ public:
         TreeNode* move_left(){ return leftPtr; }
     //void search_tree(TreeNode * crn ,int x );
        
-
 }; // end structure treeNode 
         
-
 typedef TreeNode * TreeNodePtr; 
 // synonym for TreeNode*
+
 void TreeNode::set_left(TreeNode *t){
   leftPtr=t;
 }
@@ -29,7 +34,8 @@ TreeNode::TreeNode(int x){
    rightPtr=NULL;
 
 }
+
 TreeNode::~TreeNode(){
-  cout<<"Deleting "<< data<<endl;
-  
 }
+
+#endif
